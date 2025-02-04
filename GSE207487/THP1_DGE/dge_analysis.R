@@ -2,6 +2,7 @@ library(edgeR)
 library(Homo.sapiens)
 library(gage)
 library(pathview)
+library(EnhancedVolcano)
 
 # GO and KEGG analysis with edgeR ----------
 load("out/DGEList_UNvsWT.Rdata")
@@ -49,20 +50,4 @@ pv.out.list <- sapply(path.ids2[1:3], function(pid) pathview(
 
 plin_pathway <- pathview(gene.data = edger.fc, pathway.id = "hsa04923", 
                          low = c("gene" = "red"), high = "green")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
